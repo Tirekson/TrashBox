@@ -1,0 +1,440 @@
+@import "_const";
+@import "fonts";
+
+
+
+@keyframes word-ride{
+    0%{
+        margin-left:0;
+    }
+    100%{
+        margin-left: 60%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    background: $body-bg;
+}
+
+.soc-container {
+    border: 1px solid $header-border;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.soc-links-row {
+    color: $header-socials-text;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 30px;
+    display: flex;
+    max-width: 1175px;
+    min-width: 840px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .feed-back-block {
+        display: flex;
+
+        div {
+            background-repeat: no-repeat;
+            background-position: 0 10px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .mail {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("../image/header-fa-email.png");
+            border-right: 1px solid $header-border;
+        }
+
+        .phone {
+            background-image: url("../image/header-fa-phone.png");
+        }
+    }
+
+    ul li {
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        border-left: 1px solid $header-border;
+        height: 30px;
+        padding: 0 5px;
+
+        &:last-child {
+            border-right: 1px solid $header-border;
+        }
+
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .networks-block svg {
+        height: 20px;
+        fill: $header-border;
+    }
+}
+
+.nav-row {
+    font-size: 1.2vw;
+    margin: 0 auto;
+    min-height: 90px;
+    max-width: 1175px;
+    min-width: 840px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        font-size: 2em;
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        align-items: center;
+        height: 90px;
+
+        h2 {
+            padding: 0 10px;
+        }
+
+        svg {
+            fill: $yellow;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        .active a {
+            color: $nav-active-link;
+            border-top: 3px solid $yellow;
+        }
+
+        li {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            min-height: 80px;
+            box-sizing: border-box;
+            border-bottom: 3px solid transparent;
+
+            a {
+                padding: 36px 10px;
+                display: block;
+                color: $nav-links;
+                text-decoration: none;
+            }
+
+            &:hover {
+
+                border-bottom: 3px solid $yellow;
+                animation: border 1s;
+
+                @keyframes background {
+                    50% {
+                        border-bottom: 1px solid $yellow;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+.container-block-1 {
+    background-color: $bg-black;
+    min-height: 600px;
+    color: white; //temp
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tagline {
+        margin: 0 auto;
+        max-width: 1175px;
+        min-width: 840px;
+        width: 80%;
+        font-size: 7vw;
+
+        ul li {
+            font-family: "Raleway";
+            font-weight: bold;
+            line-height: 73%;
+
+            &:first-child {
+                color: $yellow;
+            }
+
+            &:nth-child(2) {
+                font-size: 3vw;
+                animation: word-ride 1s ease 1 0s forwards;
+            }
+
+            &:last-child {
+                text-align: center;
+            }
+
+        }
+
+        .tagline-btn {
+            display: inline-block;
+            text-align: center;
+            max-width: 150px;
+            width: 20%;
+            font-size: 16px;
+            padding: 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+
+            &:last-child {
+                background-color: $yellow;
+                color: black;
+            }
+
+
+        }
+
+        .description {
+            display: inline-block;
+            font-size: 16px;
+            width: 40%;
+
+            &::before {
+                position: relative;
+                left: -60px;
+                top: 10px;
+                display: block;
+                content: '';
+                width: 50px;
+                height: 1px;
+                background-color: white;
+            }
+        }
+
+    }
+}
+
+footer {
+    background-color: $footer-bg;
+    width: 100%;
+    color: grey;
+
+
+    .footer-row {
+        min-width: 840px;
+        max-width: 1175px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .footer-tags-block {
+
+            a:hover {
+                color: $yellow;
+                border: 1px solid $yellow;
+            }
+
+        }
+
+        .footer-links {
+
+            display: flex;
+            justify-content: space-between;
+            border-right: 1px solid grey;
+            border-left: 1px solid grey;
+            align-items: center;
+            width: 33%;
+            padding: 0 20px;
+            a {
+                color: grey;
+                text-decoration: none;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+
+        ul {
+
+            flex-direction: column;
+            font-family: sans-serif;
+            display: flex;
+            width: 22%;
+            margin: 0 10px;
+
+            li {
+                position: relative;
+
+                .footer-mini-post {
+                    display: flex;
+
+                }
+
+                &:hover .footer-mini-post .photo-plug {
+                    color: $yellow;
+                    border: 2px solid $yellow;
+                }
+
+                &:hover h4 {
+                    color: $yellow;
+                }
+
+                a {
+                    color: grey;
+                    text-decoration: none;
+                }
+
+                font-size: 0.9vw;
+                display: flex;
+                flex-direction: row;
+                margin: 10px 0;
+
+                .photo-plug {
+                    border: 2px solid transparent;
+                    margin-right: 10px;
+                    width: 25%;
+                    height: 50px;
+                    display: inline-block;
+                    background-color: grey;
+                }
+
+                h3 {
+                    color: $body-bg;
+                    font-size: 2vw;
+
+                }
+
+                h4 {
+                    display: inline-block;
+                }
+
+                span {
+                    display: inline-block;
+                }
+
+                .text-plug {
+                    display: inline-block;
+                    width: 70%;
+                }
+
+                &:first-child {
+                    font-family: "Raleway", sans-serif;
+                }
+
+                .footer-tags-block {
+                    a {
+                        display: inline-block;
+                        margin: 2px;
+                        border: 1px solid grey;
+                        padding: 5px;
+                    }
+                }
+            }
+
+
+
+            .footer-list-underline {
+                border-bottom: 1px solid grey;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 20px;
+                    height: 2px;
+                    display: block;
+                    background-color: $body-bg;
+                    left: 0;
+                    bottom: -2px;
+                }
+            }
+
+            .flickrW {
+                display: block;
+
+                div {
+                    margin: 5px;
+
+                    &:hover {
+                        border: 2px solid $yellow;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .footer-socials {
+            width: 25%;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                li {
+                    display: flex;
+                }
+
+                a {
+                    display: flex;
+                    height: 15px;
+                    width: 15px;
+                    fill: grey;
+                    display: block;
+                    border: 1px solid $header-border;
+                    padding: 10px;
+
+
+                    &:hover {
+                        background-color: $yellow;
+                        fill: $bg-black;
+                        border: 1px solid $yellow;
+                    }
+                }
+            }
+        }
+
+        .footer-mail-field {
+            width: 33%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+
+            form {
+                width: 100%;
+            }
+            input[type=email] {
+                width: 70%;
+                height: 40px;
+                border: 1px solid $yellow;
+            }
+
+            input[type=submit] {
+                right: 20%;
+                width: 20%;
+                height: 44px;
+                position: relative;
+                background-color: $yellow;
+                border:none;
+            }
+        }
+
+    }
+
+}
+
